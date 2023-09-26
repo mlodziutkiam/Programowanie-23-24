@@ -98,9 +98,62 @@ void task6()
     cout << "Pole trojkata wynosi: " << areaOfTriangle;
 
 }
+
+void task7()
+{
+    double volumeOfSphere, radiusOfSphere;
+    cout << "Podaj promien kuli: ";
+    cin >> radiusOfSphere;
+    
+    volumeOfSphere = (4.0 / 3 * M_PI * pow(radiusOfSphere, 3));
+
+    cout << "Objetosc kuli o pormieniu r wynosi: " << volumeOfSphere;
+}
+
+void task8()
+{
+    double firstBaseOfTrapezium, secondBaseOfTrapezium, heightOfTrapezium;
+    cout << "Podaj pierwsza podstawe trapezu: ";
+    cin >> firstBaseOfTrapezium;
+    cout << "Podaj druga podstawe trapezu: ";
+    cin >> secondBaseOfTrapezium;
+    cout << "Podaj wysokosc trapezu: ";
+    cin >> heightOfTrapezium;
+    double areaOfTrapezium = ((firstBaseOfTrapezium + secondBaseOfTrapezium) * heightOfTrapezium) / 2;
+
+    cout << "Pole trapezu wynosi: " << areaOfTrapezium;
+
+    
+}
+
+void task9()
+{
+    double weight1, weight2, weight3;
+    double firstNumber, secondNumber, thirdNumber, average;
+    cout << "Podaj pierwsz¹ liczbe: ";
+    cin >> firstNumber;
+    cout << "Podaj drug¹ liczbe: ";
+    cin >> secondNumber;
+    cout << "Podaj trzeci¹ liczbe: ";
+    cin >> thirdNumber;
+    cout << "Podaj wagê pierwszej liczby: ";
+    cin >> weight1;
+    cout << "Podaj wagê drugiej liczby: ";
+    cin >> weight2;
+    cout << "Podaj wagê trzeciej liczby: ";
+    cin >> weight3;
+
+    average = (firstNumber * weight1 + secondNumber * weight2 + thirdNumber * weight3) / (weight1 + weight2 + weight3);
+    
+    cout << "Œrednia wa¿ona podanych liczb wraz z podanymi wagami: " << average;
+    
+
+}
+
 int main()
 {
+    setlocale(LC_CTYPE, "polish");
     //test();
-    task6();
+    task9();
     //task2();
 }
