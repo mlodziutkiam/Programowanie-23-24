@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_pp", "01_pp", "{3DD62D6A
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplicationInstructionIf", "ConsoleApplicationInstructionIf\ConsoleApplicationInstructionIf.vcxproj", "{E83D1B14-3745-4EAE-9433-5C3069F49FDE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "loop_for", "loop_for\loop_for.vcxproj", "{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringConsoleApp", "StringConsoleApp\StringConsoleApp.vcxproj", "{17FA5C69-E302-4084-8FBA-0167156B3217}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,13 +37,29 @@ Global
 		{E83D1B14-3745-4EAE-9433-5C3069F49FDE}.Release|x64.Build.0 = Release|x64
 		{E83D1B14-3745-4EAE-9433-5C3069F49FDE}.Release|x86.ActiveCfg = Release|Win32
 		{E83D1B14-3745-4EAE-9433-5C3069F49FDE}.Release|x86.Build.0 = Release|Win32
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Debug|x64.ActiveCfg = Debug|x64
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Debug|x64.Build.0 = Debug|x64
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Debug|x86.ActiveCfg = Debug|Win32
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Debug|x86.Build.0 = Debug|Win32
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Release|x64.ActiveCfg = Release|x64
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Release|x64.Build.0 = Release|x64
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Release|x86.ActiveCfg = Release|Win32
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1}.Release|x86.Build.0 = Release|Win32
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Debug|x64.ActiveCfg = Debug|x64
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Debug|x64.Build.0 = Debug|x64
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Debug|x86.ActiveCfg = Debug|Win32
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Debug|x86.Build.0 = Debug|Win32
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Release|x64.ActiveCfg = Release|x64
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Release|x64.Build.0 = Release|x64
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Release|x86.ActiveCfg = Release|Win32
+		{17FA5C69-E302-4084-8FBA-0167156B3217}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E52C56CD-BDC4-4748-89AE-2D0CD0525AF0} = {3DD62D6A-F786-4680-A91B-67F62EEBC987}
-		{E83D1B14-3745-4EAE-9433-5C3069F49FDE} = {3DD62D6A-F786-4680-A91B-67F62EEBC987}
+		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1} = {3DD62D6A-F786-4680-A91B-67F62EEBC987}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6746614-DE51-434F-9938-F3711A0B48AB}
