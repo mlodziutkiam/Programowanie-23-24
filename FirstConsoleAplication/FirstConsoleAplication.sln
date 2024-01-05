@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "loop_for", "loop_for\loop_f
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringConsoleApp", "StringConsoleApp\StringConsoleApp.vcxproj", "{17FA5C69-E302-4084-8FBA-0167156B3217}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "array", "array", "{11E4092F-3C6C-4F9E-94A1-B95B4EFD1EDC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "array_am", "array_am\array_am.vcxproj", "{3782DA7E-FF15-4114-A5F3-7A2897167844}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -53,6 +57,14 @@ Global
 		{17FA5C69-E302-4084-8FBA-0167156B3217}.Release|x64.Build.0 = Release|x64
 		{17FA5C69-E302-4084-8FBA-0167156B3217}.Release|x86.ActiveCfg = Release|Win32
 		{17FA5C69-E302-4084-8FBA-0167156B3217}.Release|x86.Build.0 = Release|Win32
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Debug|x64.ActiveCfg = Debug|x64
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Debug|x64.Build.0 = Debug|x64
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Debug|x86.ActiveCfg = Debug|Win32
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Debug|x86.Build.0 = Debug|Win32
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Release|x64.ActiveCfg = Release|x64
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Release|x64.Build.0 = Release|x64
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Release|x86.ActiveCfg = Release|Win32
+		{3782DA7E-FF15-4114-A5F3-7A2897167844}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +72,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E52C56CD-BDC4-4748-89AE-2D0CD0525AF0} = {3DD62D6A-F786-4680-A91B-67F62EEBC987}
 		{49BB905E-A0CC-4552-8CAC-C687B4FB3AE1} = {3DD62D6A-F786-4680-A91B-67F62EEBC987}
+		{3782DA7E-FF15-4114-A5F3-7A2897167844} = {11E4092F-3C6C-4F9E-94A1-B95B4EFD1EDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6746614-DE51-434F-9938-F3711A0B48AB}

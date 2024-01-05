@@ -133,6 +133,50 @@ void task5()
     }
 }
 
+// Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym. Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
+void task4()
+{
+    int number;
+    int rest;
+    std::string binaryNumber = "";
+
+    std::cout << "Podaj liczbe\n";
+    std::cin >> number;
+
+    do
+    {
+        rest = number % 2;
+        if (rest == 0)
+            binaryNumber = "0" + binaryNumber;
+        else
+            binaryNumber = "1" + binaryNumber;
+        //std::cout << rest;
+        number = number / 2;
+    } while (number != 0);
+
+    std::cout << "Liczba binarnie " << binaryNumber << "\n";
+}
+
+//Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+void task5()
+{
+    std::string textFromUser;
+    std::cout << "Podaj napis\n";
+    std::cin >> textFromUser;
+
+    //wersja 1
+    std::string reverseTextFromUser = "";
+    for (int i = 0; i < textFromUser.length(); i++)
+    {
+        reverseTextFromUser = textFromUser[i] + reverseTextFromUser;
+    }
+
+    if (textFromUser == reverseTextFromUser)
+        std::cout << "To s³owo jest palindromem\n";
+    else
+        std::cout << "To s³owo nie jest palindromem\n";
+}
+
 int main()
 {
     setlocale(LC_CTYPE, "polish");
