@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 //Napisz program, który wczyta 5 liczb a nastêpnie je wyœwietli na konsoli
 //w odwrotnej kolejnoœci
 void task1()
@@ -9,12 +10,12 @@ void task1()
 
 	for (int i = 0; i < SIZE_OF_ARRAY; i++)
 	{
-		std::cout << "Podaj liczbe\n";
-		std::cin >> numbers[i];
+		cout << "Podaj liczbe\n";
+		cin >> numbers[i];
 	}
 
 	for (int i = SIZE_OF_ARRAY - 1; i >= 0; i--)
-		std::cout << "Podana liczba " << numbers[i] << "\n";
+		cout << "Podana liczba " << numbers[i] << "\n";
 }
 
 //Napisz program, który uzupe³ni tablicê liczbami losowymi 
@@ -35,8 +36,8 @@ void task2()
 	}
 
 	for (int i = 0; i < SIZE_OF_ARRAY; i++)
-		std::cout << numbers[i] << ", ";
-	std::cout << "\n";
+		cout << numbers[i] << ", ";
+	cout << "\n";
 
 }
 
@@ -56,8 +57,8 @@ void task3()
 	}
 
 	for (int i = 0; i < SIZE_OF_ARRAY; i++)
-		std::cout << numbers[i] << ", ";
-	std::cout << "\n";
+		cout << numbers[i] << ", ";
+	cout << "\n";
 
 	int sum = 0;;
 	for (int i = 0; i < SIZE_OF_ARRAY; i++)
@@ -66,10 +67,42 @@ void task3()
 	}
 
 	double average = sum * 1.0 / SIZE_OF_ARRAY;
-	std::cout << "Œrednia liczb to: " << average << "\n";
+	cout << "Œrednia liczb to: " << average << "\n";
+}
+
+void task4()
+{
+	const int UPPER_RANGE = 10;
+	const int LOWER_RANGE = 3;
+    const int SIZE_OF_ARRAY = 5;
+	int numbers[SIZE_OF_ARRAY];
+
+	srand(time(NULL));
+
+	for (int i = 0; i < SIZE_OF_ARRAY; i++)
+	{
+		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+	}
+	
+	for (int numberFromRange = LOWER_RANGE; numberFromRange <= UPPER_RANGE; numberFromRange++)
+	{
+		int numberOfOccurrneces = 0;
+		for (int j = 0; j < SIZE_OF_ARRAY; j++)
+		{
+			if (numbers[j] == numberFromRange)
+				numberOfOccurrneces++;
+		}
+		cout << "Liczba " << numberFromRange << " wyst¹pi³a " << numberOfOccurrneces << " razy." << endl;
+	}
+}
+
+void task5()
+{
+	  
 }
 
 int main()
 {
-	task3 ();
-}
+	setlocale(LC_CTYPE, "polish");
+    task4();
+}        
