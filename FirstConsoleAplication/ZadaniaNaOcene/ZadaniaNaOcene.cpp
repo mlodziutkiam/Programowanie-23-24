@@ -1,0 +1,215 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <vector>
+
+using namespace std;
+
+/*
+
+Stwórz klasê Licz z:
+
+• prywatnym polem wartosc przechowuj¹cym wartoœæ liczbow¹.
+
+• metod¹ Dodaj przyjmuj¹c¹ jeden parametr i dodaj¹c¹ przekazan¹ wartoœæ do wartoœci trzymanej w polu wartosc.
+
+• analogiczn¹ operacjê odejmij
+
+• dodaj konstruktor bezparametrowy który ustawi wartoœæ pocz¹tkow¹ na 0
+
+• dodaj konstruktor z jednym parametrem - który inicjuje pole wartosc na liczbê przekazan¹ w parametrze.
+
+W Main utwórz kilka obiektów klasy Licz i wykonaj ró¿ne operacje. 
+*/
+
+class Count {
+private:
+    double number;
+public:
+    Count()
+    {
+        number = 0;
+     }
+
+    Count(int initialValue)
+    {
+        number = initialValue;
+    }
+    
+    void Substract(double numberToSubstract)
+    {
+        number -= numberToSubstract;
+    }
+
+    void Add(int numberToAdd)
+    {
+        number += numberToAdd;
+    }
+
+    double NumberFromUser() const
+    {
+        return number;
+    }
+};
+
+
+/*
+Stwórz klasê Sumator z:
+
+• prywatnym polem Liczby bêd¹cym tablic¹ liczb
+
+• dodaj konstruktor domyœlny który uzupe³ni tablicê wartoœciami 0
+
+• dodaj konstruktor z jednym parametrem który uzupe³ni tablicê wartoœciami pseudolosowymi z zakresu od 0 do wartoœci tego parametru.
+
+• metod¹ Suma zwracaj¹c¹ sumê liczb z pola Liczby
+
+• metodê SumaPodziel3 zwracaj¹c¹ sumê liczb z tablicy, które s¹ podzielne przez 3
+
+• metod¹ wypisuj¹c¹ wszystkie elementy tablicy
+
+• metod¹ przyjmuj¹c¹ dwa parametry: lowIndex oraz highIndex, która wypisze elementy o indeksach >= lowIndex oraz <= highIndex. Metoda powinna zadzia³aæ poprawnie, gdy lowIndex lub highIndex wykraczaj¹ poza zakres tablicy (pomin¹æ te elementy).
+*/
+
+class Sumator {
+private:
+    vector<int> Numbers;
+
+public:
+    
+    Sumator() : Numbers(10, 0) {}
+
+    
+    Sumator(int maxValue) {
+        srand(time(0)); 
+        for (int i = 0; i < 10; ++i) {
+            Numbers.push_back(rand() % (maxValue + 1));
+        }
+    }
+
+    
+    int Sum() const {
+        int sum = 0;
+        for (int num : Numbers) {
+            sum += num;
+        }
+        return sum;
+    }
+
+    
+    int SumDivisibleBy3() const {
+        int sum = 0;
+        for (int num : Numbers) {
+            if (num % 3 == 0) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    
+    void PrintAll() const {
+        for (int num : Numbers) {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+
+   
+    void PrintRange(int lowIndex, int highIndex) const {
+        if (lowIndex < 0) {
+            lowIndex = 0;
+        }
+        if (highIndex >= Numbers.size()) {
+            highIndex = Numbers.size() - 1;
+        }
+        for (int i = lowIndex; i <= highIndex; ++i) {
+            cout << Numbers[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+/*
+Stwórz klasy :
+
+• Osoba z polami : imie, nazwisko, wiek, konstruktorem inicjuj¹cym wszystkie pola oraz metod¹ Wypisz.
+
+• Ksi¹¿ka z polami : tytul, autor(typu Osoba), data wydania oraz metod¹ Wypisz Utwórz ró¿ne obiekty stworzonych klas.Wykonaj metody Wypisz.
+*/
+class Person {
+private:
+    string firstName;
+    string lastName;
+    int age;
+
+public:
+    
+    Person(string first, string last, int a) : firstName(first), lastName(last), age(a) {}
+
+    
+    void Print() const {
+        cout << "First Name: " << firstName << ", Last Name: " << lastName << ", Age: " << age << endl;
+    }
+};
+
+class Book {
+private:
+    string title;
+    Person author;
+    string publicationDate;
+
+public:
+    
+    Book(string t, Person auth, string date) : title(t), author(auth), publicationDate(date) {}
+
+    
+    void Print() const {
+        cout << "Title: " << title << endl;
+        cout << "Author: ";
+        author.Print();
+        cout << "Publication Date: " << publicationDate << endl;
+    }
+};
+
+int main()
+{
+     /* Count stuff;
+    stuff.Add(4.0);
+
+    cout << "Result: " << stuff.NumberFromUser() << endl; 
+    return 0; */
+
+    /*
+    Sumator s1;
+    cout << "Printing all elements: ";
+    s1.PrintAll();
+    cout << "Sum: " << s1.Sum() << endl;
+    cout << "Sum of numbers divisible by 3: " << s1.SumDivisibleBy3() << endl;
+
+    
+    Sumator s2(100);
+    cout << "Printing all elements: ";
+    s2.PrintAll();
+    cout << "Sum: " << s2.Sum() << endl;
+    cout << "Sum of numbers divisible by 3: " << s2.SumDivisibleBy3() << endl;
+
+    
+    cout << "Printing elements from index 2 to 5: ";
+    s2.PrintRange(2, 5);
+    cout << "Printing elements from index -3 to 15: ";
+    s2.PrintRange(-3, 15);
+    */
+
+    /*
+    
+    Person author("John", "Doe", 45);
+    author.Print();
+     
+    
+    Book book("The Story Of Karol Bakalarz", author, "2024-04-29");
+    book.Print();
+    */
+    
+}
+
