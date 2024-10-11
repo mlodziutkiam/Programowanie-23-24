@@ -1,15 +1,7 @@
-/*
-
-* Dla poni¿szych klas u³ó¿ drzewko dziedziczenia.
-- Tiger (Tygrys), Dog (Pies), Fish (Ryba), Eagle (Orze³), Mammal (Ssak), Lion (Lew), Sparrow (Wróbel), Reptile (Gad), Trout (Pstr¹g), Cat (Kot), Salmon (£osoœ), Animal (Zwierzê), Snake (W¹¿), Bird (Ptak), Turtle (¯ó³w)
-- SUV (SUV), Pickup Truck (Pick-up), Truck (Ciê¿arówka), Car (Samochód), Sedan (Sedan), Motorcycle (Motocykl), Vehicle (Pojazd), Semi-Truck (Ci¹gnik siod³owy)
-- Smartphone (Smartfon), Android Phone (Telefon z systemem Android), Electronic Device (Urz¹dzenie elektroniczne), LED TV (Telewizor LED), Laptop (Laptop), iPhone (iPhone), Television (Telewizor), Smart TV (Telewizor Smart)
-*/
-
 #include <iostream>
 using namespace std;
 
-//pierwsze drzewko
+
 class Animal {
 protected:
     
@@ -113,6 +105,10 @@ protected:
 public:
 
 };
+
+int main() {
+    Turtle();
+}
 
 //drugie drzewko
 
