@@ -1,3 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-List<int> nigga = new List<int>();
-
+﻿int niggaPrice = 5;
+double wallet = int.Parse(Console.ReadLine());
+Console.WriteLine("You can afford this many niggas: " + wallet / niggaPrice);
